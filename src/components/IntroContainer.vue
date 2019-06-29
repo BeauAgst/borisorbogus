@@ -1,5 +1,5 @@
 <template>
-  <div class="introduction">
+  <div class="page">
     <GameTitle/>
 
     <div class="text">
@@ -14,7 +14,7 @@
       </p>
     </div>
 
-    <button>Play</button>
+    <button @click=startGame>Play</button>
   </div>
 </template>
 
@@ -26,89 +26,14 @@ export default {
   components: {
     GameTitle,
   },
+  methods: {
+    startGame() {
+      this.$emit('onGameStart');
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-.introduction {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  right: 0;
-  left: 0;
-  transform: translateY(-50%);
-  text-align: center;
-  animation: fadeIn 0.7s;
-  animation-fill-mode: forwards;
-  transition: all 0.7s;
-
-  &.removed {
-    animation: fadeOut 0.7s;
-    animation-delay: 0.4s;
-
-    &:after {
-      height: 110vh;
-      width: 110vw;
-      max-height: none;
-      max-width: none;
-    }
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    width: 70vw;
-    height: 70vw;
-    max-width: 840px;
-    max-height: 80vh;
-    transform: translate(-50%, -50%) rotate(-3deg);
-    background: #fff;
-    transition: all 0.1s ease-out;
-    animation: scale 8s infinite ease-in-out;
-  }
-
-  .text {
-    margin: 0 auto;
-    padding: 30px;
-    max-width: 540px;
-  }
-
-  .button {
-    line-height: 60px;
-  }
-
-  .btn {
-    transition: 0.1s all;
-
-    &:hover {
-      padding: 0 30px;
-      line-height: 50px;
-      letter-spacing: 0.1em;
-      font-size: 19px;
-      box-shadow: 2px 1px 19px rgba(0, 0, 0, 0.15);
-      transform: rotate(3deg);
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .introduction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 30px 0;
-    position: static;
-    transform: none;
-    min-height: 100%;
-
-    &:after {
-      display: none;
-    }
-  }
-}
+@import '@/scss/main.scss';
 </style>
