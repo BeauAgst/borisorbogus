@@ -28,6 +28,7 @@ export default {
   background: $color--primary;
   border-radius: .1em;
   box-shadow: 2px 1px 19px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
 
   div {
     display: inline-block;
