@@ -1,7 +1,9 @@
 // Colors
 $color--primary: #0087dc;
 $color--secondary: #3f50b1;
+$color--tertiary: #004066;
+$color--highlight: #ffeb9b;
 
 // Type
 $font--primary: 'Montserrat', sans-serif;
-$link--color: #AD4200;
+$link--color: $color--highlight;

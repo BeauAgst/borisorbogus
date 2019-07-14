@@ -1,13 +1,15 @@
 button {
 	display: inline-block;
 	text-decoration: none;
-	margin: 0 5px;
-	padding: 0 20px;
+	margin: 0 15px;
+	padding: 0 30px;
 	line-height: 40px;
 	border-radius: 7px;
-  border: none;
-	color: #fff;
-	background: $color--secondary;
+	border: none;
+	cursor: pointer;
+	font-weight: 900;
+	color: $color--tertiary;
+	background: $color--highlight;
 	text-transform: uppercase;
 	font-family: $font--primary;
   font-size: 16px;
@@ -19,7 +21,6 @@ button {
 	}
 
 	&:hover {
-		color: #fff;
-		background: lighten($color--secondary, 5%);
+		background: #ffffff;
 	}
 }

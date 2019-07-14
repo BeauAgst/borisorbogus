@@ -61,6 +61,7 @@ export default {
   font-size: 28px;
 }
 .context {
-
+  margin-top: 20px;
+  font-size: 20px;
 }
 </style>
